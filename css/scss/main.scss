@@ -1,0 +1,154 @@
+@import '_normalize';
+
+
+$c_dark: #2c303a;
+$c_pink_light: #c591ec;
+$c_pink_dark: #9e80dd;
+$c_gray_bg: #f1f4f7;
+$c_text_dark: #2b303b;
+$c_text_gray: #83838f;
+
+body{
+    font-family: 'Raleway', sans-serif;
+    background: $c_gray_bg;
+    color: $c_text_dark;
+}
+
+.container{
+    width: 100%;
+    max-width: 1180px;
+    padding: 0 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.logo{
+    display: inline-block;
+    width: 162px;
+    height: 38px;
+    margin-top: 17px;
+    background: url('../img/logo.svg') red;
+    // background-s;
+}
+
+.mainnav{
+    background: $c_dark;
+    color: #fff;
+    height: 72px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.54);
+    a{
+        color: #fff;
+    }
+}
+
+.pages{
+    float: right;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li{
+        display: inline-block;
+        &:not(:last-of-type){
+            margin-right: 30px;
+        }
+    }
+    a{
+        text-decoration: none;
+        line-height: 72px;
+        font-size: 13px;
+    }
+}
+
+header{
+    background: linear-gradient(to right, $c_pink_light, $c_pink_dark);
+    color: #fff;
+    padding: 80px 0 140px;
+    h1{
+        font-size: 40px;
+        font-weight: 400;
+        letter-spacing: 0.05em;
+    }
+    .updated_at{
+        font-size: 12px;
+        letter-spacing: 0.05em;
+    }
+    .table{
+        border-top: 1px solid #fff;
+    }
+}
+
+.table{
+    display: table; 
+    width: 100%;
+}
+
+.cell{
+    display: table-cell;
+    vertical-align: middle;
+    min-width: 200px;
+    box-sizing: border-box;
+}
+
+.cell-main{
+    width: 100%;
+}
+
+.bt{
+    border-top: 1px solid #fff;
+    margin-top: -75px;
+    color: #fff;
+    margin-bottom: 50px;
+    .cell{
+        height: 74px;
+        line-height: 74px;
+        padding: 0 50px;
+        &:first-of-type{
+            padding-left: 0;
+        }
+    }
+}
+
+.item{
+    background: #fff;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    .cell{
+        padding: 30px 50px;
+    }
+    .title{
+        font-size: 18px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin: 0 0 20px;
+    }
+    .location{
+        color: $c_text_gray;
+        font-size: 13px;
+    }
+}
+
+.label{
+    display: inline-block;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 20px;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    background: $c_gray_bg;
+    color: $c_text_gray;
+    border-radius: 4px;
+    &:not(:last-of-type){
+        margin-right: 20px;
+    }
+
+    &.level-2{
+        background-color: #5a9ed4;
+        color: #fff;
+    }
+    &.level-3{
+        background-color: #70c691;
+        color: #fff;
+    }
+}
