@@ -1,0 +1,13 @@
+<svg id="burger" xmlns="http://www.w3.org/2000/svg" width="27" height="18" viewBox="0 0 27 18">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="line3" class="cls-1" d="M312,25V23h27v2H312Z" transform="translate(-312 -23)"/>
+  <path id="line2" class="cls-1" d="M317,33V31h22v2H317Z" transform="translate(-312 -23)"/>
+  <path id="line1" class="cls-1" d="M312,41V39h27v2H312Z" transform="translate(-312 -23)"/>
+</svg>
