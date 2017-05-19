@@ -48,10 +48,21 @@
                     <p class="location">LONDON</p>
                 </div>
                 <div class="cell">
-                    <a href="">
+                    <a href="" class="details-btn">
                         <span class="plus"></span>
                         <span class="plus-view-details">VEIW DETAILS</span>
                     </a>
+                </div>
+                <div class="modal-content">
+                    <div class="text">
+                        <p>The Level 1 Functional Skills qualification in English is an ideal qualification for learners who wish to develop their English skills for use across a broad range of contexts.  The qualification will encourage learners to demonstrate their ‘functional English’ skills and are essentially concerned with developing and recognising the ability of learners to apply and transfer skills in ways that are appropriate to their situation.  The aims of the qualification are to enable learners to promote the development of English skills for home, leisure and work</p>
+                        <p>The qualification consists of 3 components that are individually assessed using a mixture of internal and external assessments.  The course is flexible in design enabling the learner to attempt the formal assessments on an on-demand basis when they feel ready. We provide an 8 session training course, delivered in the workplace by a method of blended learning.</p>
+                    </div>
+                    <div class="info">
+                        <span>LONDON</span>
+                        <span>100% EMPLoyer based, day release</span>
+                    </div>
+                    <div class="level">2</div>
                 </div>
             </div>
             <div class="table item">
@@ -64,7 +75,7 @@
                     <p class="location">LONDON</p>
                 </div>
                 <div class="cell">
-                    <a href="">
+                    <a href="" class="details-btn">
                         <span class="plus"></span>
                         <span class="plus-view-details">VEIW DETAILS</span>
                     </a>
@@ -80,7 +91,7 @@
                     <p class="location">LONDON</p>
                 </div>
                 <div class="cell">
-                    <a href="">
+                    <a href="" class="details-btn">
                         <span class="plus"></span>
                         <span class="plus-view-details">VEIW DETAILS</span>
                     </a>
@@ -91,6 +102,93 @@
             </footer>
         </div>
     </div>
+
+    <div class="modal">
+        <div class="description" v-if="showDescription">
+            <div class="close"></div>
+            <div class="table">
+                <div class="cell main">
+                    <h2>{{ title }}</h2>
+                    <div class="labels">
+                        <div class="label category">{{ category }}</div>
+                        <div class="label" :class="'level-' + level">LEVEL {{ level }}</div>
+                    </div>
+                    <div class="info" v-html="info"></div>
+                    <div class="text" v-html="text"></div>
+                </div>
+                <div class="cell aside">
+                    <div class="aside-content">
+                        <div class="icon-circle icon-paper">
+                            <img src="img/paper.png" width="50%" alt="">
+                        </div>
+                        <h3>REQUEST INFORMATION</h3>
+                        <p>It only takes a few minutes to request more information about this apprenticeship.</p>
+                    </div>
+                    <div class="btn" id="get_started_btn">GET STARTED</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="form" v-if="showForm">
+            <div class="close"></div>
+            <div class="table">
+                <div class="cell main">
+                    <h2>INFO REQUEST</h2>
+                    <form action="" class="info-form">
+                        <label for="">NAME</label>
+                        <input type="text">
+                        <label for="">EMAIL</label>
+                        <input type="text">
+                        <label for="">TELEPHONE</label>
+                        <input type="text">
+                        <label for="">NOTES</label>
+                        <textarea></textarea>
+                        <button class="btn">SUBMIT</button>
+                    </form>
+                </div>
+                <div class="cell aside">
+                    <div class="aside-content">
+                        <div class="icon-circle icon-paper">
+                            <img src="img/save-circle.png" width="50%" alt="">
+                        </div>
+                        <h3>NEED HELP?</h3>
+                        <p>EMAIL HELP@UCAN.CO.UK OR CALL US ON  <span>01278&nbsp;452&nbsp;015</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="modal">
+        <div class="close"></div>
+        <div class="table">
+            <div class="cell main">
+                <h2>IT, Software, Web and Telecoms Professionals - Advanced Apprenticeship</h2>
+                <div class="labels">
+                    <div class="label category">IT, Software, Web and Telecoms Professionals</div>
+                    <div class="label level-4">LEVEL 4</div>
+                </div>
+                <div class="info">
+                    <span>LONDON</span>
+                    <span>100% EMPLoyer based, day release</span>
+                </div>
+                <div class="text">
+                    <p>The Level 1 Functional Skills qualification in English is an ideal qualification for learners who wish to develop their English skills for use across a broad range of contexts.  The qualification will encourage learners to demonstrate their ‘functional English’ skills and are essentially concerned with developing and recognising the ability of learners to apply and transfer skills in ways that are appropriate to their situation.  The aims of the qualification are to enable learners to promote the development of English skills for home, leisure and work</p>
+                    <p>The qualification consists of 3 components that are individually assessed using a mixture of internal and external assessments.  The course is flexible in design enabling the learner to attempt the formal assessments on an on-demand basis when they feel ready. We provide an 8 session training course, delivered in the workplace by a method of blended learning.</p>
+                </div>
+            </div>
+            <div class="cell aside">
+                <div class="icon-circle icon-paper">
+                    <img src="img/paper.png" width="50%" alt="">
+                </div>
+                <h3>REQUEST INFORMATION</h3>
+                <p>It only takes a few minutes to request more information about this apprenticeship.</p>
+                <div class="btn">GET STARTED</div>
+            </div>
+        </div>
+    </div> -->
+
+    <script src="https://unpkg.com/vue@2.3.3"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 	<script> window.jQuery || document.write('<script src="js/jquery-3.1.0.min.js"><\/script>')</script>
 	<script src="js/main.js"></script>
