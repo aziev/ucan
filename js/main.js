@@ -5,8 +5,10 @@ $(document).ready(function() {
         menu: $('.pages'),
         detailsBtn: $('.details-btn'),
         modalCloseBtn: $('.modal .close'),
-        getStartedBtn: $('#get_started_btn'),
+        modal: $('.modal'),
     };
+
+    console.log(elements);
 
     $(elements.burger).on('click', function (e) {
         e.preventDefault();
@@ -33,10 +35,25 @@ $(document).ready(function() {
         $(this).closest('.modal').removeClass('active');
     });
 
-    $(elements.getStartedBtn).on('click', function (e) {
+    $(document).on('click', '#get_started_btn', function (e) {
         e.preventDefault();
         vm.showDescription = false;
         vm.showForm = true;
+    });
+
+    $(document).on('click', '#back_to_courses_btn', function (e) {
+        e.preventDefault();
+
+        $(elements.modal).removeClass('active');
+        vm.showMsgSent = false;
+        vm.showDescription = true;
+    });
+
+    $(document).on('click', '#submit_form_btn', function (e) {
+        e.preventDefault();
+
+        vm.showForm = false;
+        vm.showMsgSent = true;
     });
 
 });
@@ -51,8 +68,10 @@ var vm = new Vue({
         text: '',
         showDescription: true,
         showForm: false,
+        showMsgSent: false,
 
-        showDescription: false,
-        showForm: true,
+        // showDescription: false,
+        // // showForm: true,
+        // showMsgSent: true,
     },
 });
