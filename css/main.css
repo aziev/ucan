@@ -444,6 +444,8 @@ a {
     vertical-align: middle; }
     .pages .get-access p {
       letter-spacing: 0.05em; }
+    .pages .get-access img {
+      width: 38px; }
   .pages li {
     display: inline-block; }
     .pages li:not(:last-of-type) {
@@ -473,7 +475,10 @@ a {
   .pages .btn {
     background: #5a9ed4;
     padding: 8px 14px;
-    display: inline-block; }
+    display: inline-block;
+    transition: background .2s; }
+    .pages .btn:hover {
+      background: #3486c7; }
 
 header {
   background: linear-gradient(to right, #c591ec, #9e80dd);
@@ -624,7 +629,8 @@ footer {
 .phone {
   display: inline-block;
   vertical-align: top;
-  background: red;
+  background: url("../img/phone.png");
+  background-size: contain;
   width: 40px;
   height: 40px;
   border-radius: 40px;
@@ -638,17 +644,18 @@ footer {
   width: 1080px;
   max-width: calc(100% - 20px);
   margin: 0 auto;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -46%);
   background: #fff;
   color: #2b303b;
   border-radius: 4px;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
   opacity: 0;
   visibility: hidden;
-  transition: opacity .2s; }
+  transition: opacity .3s, transform .3s; }
   .modal.active {
     opacity: 1;
-    visibility: visible; }
+    visibility: visible;
+    transform: translate(-50%, -50%); }
   .modal .main {
     padding: 50px 80px;
     width: 100%;
@@ -755,7 +762,10 @@ footer {
   min-width: 130px;
   text-align: center;
   outline: none;
-  letter-spacing: 0.05em; }
+  letter-spacing: 0.05em;
+  transition: background .2s; }
+  .btn:hover {
+    background: #048041; }
 
 .info-form input, .info-form textarea {
   display: block;
