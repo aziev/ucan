@@ -216,6 +216,7 @@ footer{
     background: #fff;
     border-radius: 8px;
     margin-bottom: 20px;
+    transition: .2s ease;
     .cell{
         padding: 30px 50px;
     }
@@ -232,6 +233,9 @@ footer{
     }
     .modal-content{
         display: none;
+    }
+    &:hover{
+        box-shadow: 0px 0 20px rgba(0, 0, 0, 0.2);
     }
 }
 
@@ -480,10 +484,10 @@ footer{
     .msgSent{
         background: #f1f4f7;
         padding-bottom: 50px;
-        .icon-circle{
-            background: url('../img/dirt.png') no-repeat center center;
-            background-size: contain;
-        }
+        // .icon-circle{
+        //     background: url('../img/dirt.png') no-repeat center center;
+        //     background-size: contain;
+        // }
     }
 }
 

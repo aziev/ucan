@@ -534,7 +534,8 @@ footer {
 .item {
   background: #fff;
   border-radius: 8px;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  transition: .2s ease; }
   .item .cell {
     padding: 30px 50px; }
   .item .title {
@@ -548,6 +549,8 @@ footer {
     font-size: 13px; }
   .item .modal-content {
     display: none; }
+  .item:hover {
+    box-shadow: 0px 0 20px rgba(0, 0, 0, 0.2); }
 
 .label {
   display: inline-block;
@@ -745,9 +748,6 @@ footer {
   .modal .msgSent {
     background: #f1f4f7;
     padding-bottom: 50px; }
-    .modal .msgSent .icon-circle {
-      background: url("../img/dirt.png") no-repeat center center;
-      background-size: contain; }
 
 .btn {
   display: inline-block;
