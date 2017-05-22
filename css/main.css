@@ -371,7 +371,8 @@ textarea {
 body {
   font-family: 'Raleway', sans-serif;
   background: #f1f4f7;
-  color: #2b303b; }
+  color: #2b303b;
+  letter-spacing: 0.085em; }
 
 a {
   color: #8565cc;
@@ -535,7 +536,8 @@ footer {
   background: #fff;
   border-radius: 8px;
   margin-bottom: 20px;
-  transition: .2s ease; }
+  transition: .2s ease;
+  cursor: pointer; }
   .item .cell {
     padding: 30px 50px; }
   .item .title {
@@ -551,6 +553,8 @@ footer {
     display: none; }
   .item:hover {
     box-shadow: 0px 0 20px rgba(0, 0, 0, 0.2); }
+    .item:hover .plus {
+      transform: rotate(90deg); }
 
 .label {
   display: inline-block;
@@ -590,8 +594,6 @@ footer {
   background: url("../img/plus.svg");
   background-size: contain;
   transition: transform .2s; }
-  .plus:hover {
-    transform: rotate(90deg); }
 
 .plus-view-details {
   display: none;
@@ -775,7 +777,8 @@ footer {
   padding: 15px;
   outline: none;
   transition: border-color .2s;
-  font-size: 14px; }
+  font-size: 14px;
+  border-radius: 4px; }
   .info-form input:focus, .info-form textarea:focus {
     border-color: #06b15a; }
 

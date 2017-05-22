@@ -3,7 +3,8 @@ $(document).ready(function() {
     var elements = {
         burger: $('.burger'),
         menu: $('.pages'),
-        detailsBtn: $('.details-btn'),
+        // detailsBtn: $('.details-btn'),
+        item: $('.item'),
         modalCloseBtn: $('.modal .close'),
         modal: $('.modal'),
     };
@@ -16,14 +17,14 @@ $(document).ready(function() {
         $(elements.menu).toggleClass('active');
     });
 
-    $(elements.detailsBtn).on('click', function (e) {
+    $(elements.item).on('click', function (e) {
         e.preventDefault();
 
-        var $item = $(this).closest('.item');
-        var $content = $item.find('.modal-content');
+        // var $(this) = $(this).closest('.item');
+        var $content = $(this).find('.modal-content');
 
-        vm.title = $item.find('h2').text();
-        vm.category = $item.find('.category').text();
+        vm.title = $(this).find('h2').text();
+        vm.category = $(this).find('.category').text();
         vm.text = $content.find('.text').html();
         vm.level = $content.find('.level').text();
         vm.info = $content.find('.info').html();

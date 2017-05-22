@@ -12,6 +12,7 @@ body{
     font-family: 'Raleway', sans-serif;
     background: $c_gray_bg;
     color: $c_text_dark;
+    letter-spacing: 0.085em;
 }
 
 a{
@@ -217,6 +218,7 @@ footer{
     border-radius: 8px;
     margin-bottom: 20px;
     transition: .2s ease;
+    cursor: pointer;
     .cell{
         padding: 30px 50px;
     }
@@ -236,6 +238,9 @@ footer{
     }
     &:hover{
         box-shadow: 0px 0 20px rgba(0, 0, 0, 0.2);
+        .plus{
+            transform: rotate(90deg);
+        }
     }
 }
 
@@ -285,9 +290,6 @@ footer{
     background: url('../img/plus.svg');
     background-size: contain;
     transition: transform .2s;
-    &:hover{
-        transform: rotate(90deg);
-    }
 }
 
 .plus-view-details{
@@ -521,6 +523,7 @@ footer{
         outline: none;
         transition: border-color .2s;
         font-size: 14px;
+        border-radius: 4px;
         &:focus{
             border-color: #06b15a;
         }
