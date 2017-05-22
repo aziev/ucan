@@ -485,7 +485,11 @@ footer{
 
     .msgSent{
         background: #f1f4f7;
+        border-radius: 4px;
         padding-bottom: 50px;
+        .aside{
+            border-radius: 4px;
+        }
         // .icon-circle{
         //     background: url('../img/dirt.png') no-repeat center center;
         //     background-size: contain;

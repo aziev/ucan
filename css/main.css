@@ -749,7 +749,10 @@ footer {
       padding-top: 20px; }
   .modal .msgSent {
     background: #f1f4f7;
+    border-radius: 4px;
     padding-bottom: 50px; }
+    .modal .msgSent .aside {
+      border-radius: 4px; }
 
 .btn {
   display: inline-block;
