@@ -34,6 +34,9 @@ $(document).ready(function() {
 
     $(elements.modalCloseBtn).on('click', function () {
         $(this).closest('.modal').removeClass('active');
+        vm.showDescription = true;
+        vm.showForm = false;
+        vm.showMsgSent = false;
     });
 
     $(document).on('click', '#get_started_btn', function (e) {

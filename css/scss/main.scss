@@ -478,9 +478,9 @@ footer{
     }
 
     .description{
-        &>*:not(.close){
-            transition: transform .2s;
-            transform: translateY(20px);
+        & > *:not(.close){
+            transition: transform .4s ease-out;
+            transform: translateY(16px);
         }
     }
     .form{
@@ -530,6 +530,7 @@ footer{
     border-radius: 4px;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
     transition: transform .3s;
+    overflow: hidden;
 }
 
 .btn{
