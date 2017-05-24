@@ -149,71 +149,73 @@
     </div>
 
     <div class="modal">
-        <div class="description" v-if="showDescription">
-            <div class="close"></div>
-            <div class="table">
-                <div class="cell main">
-                    <h2>{{ title }}</h2>
-                    <div class="labels">
-                        <div class="label category">{{ category }}</div>
-                        <div class="label" :class="'level-' + level">LEVEL {{ level }}</div>
+        <div class="modal-wrapper">
+            <div class="description" v-if="showDescription">
+                <div class="close"></div>
+                <div class="table">
+                    <div class="cell main">
+                        <h2>{{ title }}</h2>
+                        <div class="labels">
+                            <div class="label category">{{ category }}</div>
+                            <div class="label" :class="'level-' + level">LEVEL {{ level }}</div>
+                        </div>
+                        <div class="info" v-html="info"></div>
+                        <div class="text" v-html="text"></div>
                     </div>
-                    <div class="info" v-html="info"></div>
-                    <div class="text" v-html="text"></div>
-                </div>
-                <div class="cell aside">
-                    <div class="aside-content">
-                        <div class="icon-circle icon-paper">
-                            <img src="img/paper.png" width="50%" alt="">
+                    <div class="cell aside">
+                        <div class="aside-content">
+                            <div class="icon-circle icon-paper">
+                                <img src="img/paper.png" width="50%" alt="">
+                            </div>
+                            <h3>REQUEST INFORMATION</h3>
+                            <p>It only takes a few minutes to request more information about this apprenticeship.</p>
                         </div>
-                        <h3>REQUEST INFORMATION</h3>
-                        <p>It only takes a few minutes to request more information about this apprenticeship.</p>
-                    </div>
-                    <div class="btn" id="get_started_btn">GET STARTED</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="form" v-if="showForm">
-            <div class="close"></div>
-            <div class="table">
-                <div class="cell main">
-                    <h2>INFO REQUEST</h2>
-                    <form action="" class="info-form">
-                        <label for="">NAME</label>
-                        <input type="text">
-                        <label for="">EMAIL</label>
-                        <input type="text">
-                        <label for="">TELEPHONE</label>
-                        <input type="text">
-                        <label for="">NOTES</label>
-                        <textarea></textarea>
-                        <div class="submit-btn-area">
-                            <button type="button" class="btn" id="submit_form_btn">SUBMIT</button>
-                        </div>
-                    </form>
-                </div>
-                <div class="cell aside">
-                    <div class="aside-content">
-                        <div class="icon-circle icon-paper">
-                            <img src="img/phone1.png" width="50%" alt="">
-                        </div>
-                        <h3>NEED HELP?</h3>
-                        <p>EMAIL HELP@UCAN.CO.UK OR CALL US ON  <span>01278&nbsp;452&nbsp;015</span></p>
+                        <div class="btn" id="get_started_btn">GET STARTED</div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="msgSent" v-if="showMsgSent">
-            <div class="close"></div>
-            <div class="aside">
-                <div class="icon-circle icon-paper">
-                    <img src="img/paper-success.png" width="50%" alt="">
+            <div class="form" v-if="showForm">
+                <div class="close"></div>
+                <div class="table">
+                    <div class="cell main">
+                        <h2>INFO REQUEST</h2>
+                        <form action="" class="info-form">
+                            <label for="">NAME</label>
+                            <input type="text">
+                            <label for="">EMAIL</label>
+                            <input type="text">
+                            <label for="">TELEPHONE</label>
+                            <input type="text">
+                            <label for="">NOTES</label>
+                            <textarea></textarea>
+                            <div class="submit-btn-area">
+                                <button type="button" class="btn" id="submit_form_btn">SUBMIT</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="cell aside">
+                        <div class="aside-content">
+                            <div class="icon-circle icon-paper">
+                                <img src="img/phone1.png" width="50%" alt="">
+                            </div>
+                            <h3>NEED HELP?</h3>
+                            <p>EMAIL HELP@UCAN.CO.UK OR CALL US ON  <span>01278&nbsp;452&nbsp;015</span></p>
+                        </div>
+                    </div>
                 </div>
-                <h3>MESSAGE SENT</h3>
-                <p>One of the team member will be in touch with you shortly</p>
-                <a href="" class="btn" id="back_to_courses_btn">BACK TO COURSES</a>
+            </div>
+
+            <div class="msgSent" v-if="showMsgSent">
+                <div class="close"></div>
+                <div class="aside">
+                    <div class="icon-circle icon-paper">
+                        <img src="img/paper-success.png" width="50%" alt="">
+                    </div>
+                    <h3>MESSAGE SENT</h3>
+                    <p>One of the team member will be in touch with you shortly</p>
+                    <a href="" class="btn" id="back_to_courses_btn">BACK TO COURSES</a>
+                </div>
             </div>
         </div>
     </div>
