@@ -150,7 +150,7 @@
 
     <div class="modal">
         <div class="modal-wrapper">
-            <div class="description" v-if="showDescription">
+            <div class="description" v-show="showDescription">
                 <div class="close"></div>
                 <div class="table">
                     <div class="cell main">
@@ -175,7 +175,7 @@
                 </div>
             </div>
 
-            <div class="form" v-if="showForm">
+            <div class="form" v-show="showForm">
                 <div class="close"></div>
                 <div class="table">
                     <div class="cell main">
@@ -206,7 +206,7 @@
                 </div>
             </div>
 
-            <div class="msgSent" v-if="showMsgSent">
+            <div class="msgSent" v-show="showMsgSent">
                 <div class="close"></div>
                 <div class="aside">
                     <div class="icon-circle icon-paper">

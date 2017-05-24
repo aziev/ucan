@@ -78,4 +78,22 @@ var vm = new Vue({
         // // showForm: true,
         // showMsgSent: true,
     },
+    watch: {
+        showForm: function (value) {
+            if (value) {
+                $('.form').removeClass('animate')
+                setTimeout(function () {
+                    $('.form').addClass('animate');
+                }, 30);
+            }
+        },
+        showMsgSent: function (value) {
+            if (value) {
+                $('.msgSent').removeClass('animate')
+                setTimeout(function () {
+                    $('.msgSent').addClass('animate');
+                }, 30);
+            }
+        },
+    },
 });

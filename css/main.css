@@ -744,6 +744,10 @@ footer {
     transform: translateY(16px); }
   .modal .form {
     position: relative; }
+    .modal .form > *:not(.close) {
+      transform: translateY(20px);
+      opacity: 0;
+      transition: 0s; }
     .modal .form .close {
       top: 18px; }
     .modal .form h2 {
@@ -756,12 +760,24 @@ footer {
       padding-top: 20px; }
     .modal .form form {
       padding-top: 20px; }
+    .modal .form.animate > *:not(.close) {
+      transform: translateY(0px);
+      transition: transform .4s, opacity .2s;
+      opacity: 1; }
   .modal .msgSent {
     background: #f1f4f7;
     border-radius: 4px;
     padding-bottom: 50px; }
     .modal .msgSent .aside {
       border-radius: 4px; }
+    .modal .msgSent > *:not(.close) {
+      transform: translateY(20px);
+      opacity: 0;
+      transition: 0s; }
+    .modal .msgSent.animate > *:not(.close) {
+      transform: translateY(0px);
+      transition: transform .4s, opacity .2s;
+      opacity: 1; }
 
 .modal-wrapper {
   position: absolute;

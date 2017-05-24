@@ -485,6 +485,11 @@ footer{
     }
     .form{
         position: relative;
+        & > *:not(.close){
+            transform: translateY(20px);
+            opacity: 0;
+            transition: 0s;
+        }
         .close{
             top: 18px;
         }
@@ -501,6 +506,13 @@ footer{
         form{
             padding-top: 20px;
         }
+        &.animate{
+            & > *:not(.close){
+                transform: translateY(0px);
+                transition: transform .4s, opacity .2s;
+                opacity: 1;
+            }
+        }
     }
 
     .msgSent{
@@ -510,10 +522,22 @@ footer{
         .aside{
             border-radius: 4px;
         }
+        & > *:not(.close){
+            transform: translateY(20px);
+            opacity: 0;
+            transition: 0s;
+        }
         // .icon-circle{
         //     background: url('../img/dirt.png') no-repeat center center;
         //     background-size: contain;
         // }
+        &.animate{
+            & > *:not(.close){
+                transform: translateY(0px);
+                transition: transform .4s, opacity .2s;
+                opacity: 1;
+            }
+        }
     }
 }
 
