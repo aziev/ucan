@@ -60,6 +60,11 @@ $(document).ready(function() {
         vm.showMsgSent = true;
     });
 
+    $('#submit_form_btn_second').on('click', function (e) {
+        e.preventDefault();
+        $('#submit_form_btn').trigger('click');
+    });
+
 });
 
 var vm = new Vue({

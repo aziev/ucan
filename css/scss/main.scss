@@ -1,4 +1,5 @@
 @import '_normalize';
+@import '_buttons';
 
 
 $c_dark: #2c303a;
@@ -168,7 +169,7 @@ header{
         letter-spacing: 0.05em;
     }
     .updated_at{
-        font-size: 12px;
+        font-size: 13px;
         letter-spacing: 0.05em;
     }
     .table{
@@ -180,7 +181,7 @@ footer{
     text-align: center;
     padding: 30px 0 100px;
     font-weight: 600;
-    font-size: 12px;
+    font-size: 13px;
     a{
         letter-spacing: 0.1em;
         opacity: 0.4;
@@ -216,6 +217,7 @@ footer{
         height: 74px;
         line-height: 74px;
         padding: 0 50px;
+        font-size: 13px;
         &:first-of-type{
             padding-left: 0;
         }
@@ -235,7 +237,7 @@ footer{
         font-size: 18px;
         font-weight: 400;
         text-transform: uppercase;
-        letter-spacing: 0.05em;
+        letter-spacing: 0.085em;
         margin: 0 0 20px;
     }
     .location{
@@ -437,6 +439,7 @@ footer{
         font-size: 24px;
         font-weight: 400;
         line-height: 1.4;
+        letter-spacing: 0.085em;
     }
     .labels{
         margin-bottom: 20px;
@@ -658,9 +661,31 @@ footer{
                 overflow-x: hidden;
             }
             .aside{
-                display: none;
+                // display: none;
             }
         }
+
+        .submit-btn-area{
+            display: none;
+        }
+    }
+
+    .msgSent{
+        .icon-circle{
+            margin-top: 40px;
+        }
+    }
+
+    .form{
+        .main{
+            overflow-y: visible;
+        }
+    }
+}
+
+@media (min-width: 901px){
+    #submit_form_btn_second{
+        display: none;
     }
 }
 
